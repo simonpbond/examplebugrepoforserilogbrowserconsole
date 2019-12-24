@@ -1,0 +1,30 @@
+﻿@inherits LayoutComponentBase
+
+<div class="sidebar">
+    <NavMenu />
+</div>
+
+<div class="main">
+    <div class="top-row px-4">
+        <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+    </div>
+
+    <div class="content px-4">
+        <b>MainLayout.razor</b><br />
+        <small>Managing session storage here.</small><hr />
+        <small><b>Example use case:</b> Storing and retrieving the jwt token for user authentication.</small><br />
+        <small><b>Problem:</b> Fails after adding Serilog.Sinks.BrowserConsole in Program.cs</small><br />
+        <br />
+        <strong>Default Session Storage Key:</strong> @_sessionStorageKey<br /><br />
+        <strong>Current SessionStorage Value:</strong> @(_sessionStorageValueGet ?? "Failed to retrieve example session storage value.")<br />
+        <br />
+        <small><b>Expected SessionStorage Value:</b><br />@_sessionStorageValueSet</small>
+        <br />
+        <hr />
+        @Body
+    </div>
+</div>
+
+
+
+
