@@ -19,7 +19,7 @@ namespace BlazorWasmBugRepo.Client
                 .WriteTo.BrowserConsole()
                 .CreateLogger();
 
-            //Log.Information("Hello, browser!");
+            Log.Information("Hello, browser!");
 
             CreateHostBuilder(args).Build().Run();
         }

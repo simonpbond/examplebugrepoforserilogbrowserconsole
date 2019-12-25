@@ -24,7 +24,7 @@ namespace BlazorWasmBugRepo.Client.Shared
         {
             if (firstRender)
             {
-
+                Log.Information("Is first render");
                 await _sessionStorageService.SetSessionStorage(_sessionStorageKey, _sessionStorageValueSet);
                 _sessionStorageValueGet = await _sessionStorageService.GetSessionStorage(_sessionStorageKey);
                 StateHasChanged();
